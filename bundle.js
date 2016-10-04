@@ -724,7 +724,7 @@ webpackJsonp([0],[
 	// Write new HTML for an individual share
 	var writeBillHTML = function writeBillHTML(bill) {
 	  var billHMTL = '<p>Bill #' + bill.id + ': ' + bill.num_people + ' people, ';
-	  billHMTL += 'total cost of $' + bill.total_amount.toFixed(2) + '</p>';
+	  billHMTL += 'total cost of $' + bill.total_amount + '</p>';
 	  return billHMTL;
 	};
 
