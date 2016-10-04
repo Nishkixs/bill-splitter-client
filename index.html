@@ -85,6 +85,35 @@
 
         <!-- bill-related views -->
 
+        <!-- bill lookup view -->
+        <article id='look-up-bill-view' class='look-up-bill-view view-box'>
+          <legend>View All My Bills</legend>
+          <button type='button' id='index-bills-view-button' class='big-button btn btn-default'>See All Bills</button>
+          <div class="button-spacer"></div>
+          <form id="get-bill-by-id" class='bill-form get-bill-by-id'>
+            <fieldset>
+              <legend>Look up a bill by ID</legend>
+              <input class="form-control" id="bill-lookup_id" name="bill[id]" type="text" placeholder="Bill ID">
+              <br>
+              <input class="submit big-button" type="submit" name="submit" value="Look up Bill">
+            </fieldset>
+          </form>
+        </article>
+
+        <!-- bill index view -->
+        <article id='index-bills-view' class='index-bills-view view-box'>
+          <legend>My Bills</legend>
+          <div id="bills-list" class="bills-list">
+          </div>
+        </article>
+
+        <!-- bill show view -->
+        <article id='show-bill-view' class='show-bill-view view-box'>
+          <legend>My Bill</legend>
+          <div id="bill-display" class="bill-display">
+          </div>
+        </article>
+
         <!-- get names of people in the group -->
         <article id='get-group-names-view' class='get-group-names-view view-box'>
         	<input type="hidden" name="count" value="1">
@@ -117,10 +146,23 @@
 
         <article id='working-share-summary-view' class='working-share-summary-view view-box'>
           <div id="shares-list" class="shares-list">
-            <legend>Cool. Here's what everyone owes:</legend>
+            <legend>Here's what everyone owes:</legend>
           </div>
-          <button type='button' id='save-bill-button' class='btn btn-default'>Save This Bill</button>
-          <button type='button' id='delete-bill-button' class='btn btn-default'>Delete This Bill</button>
+          <button type='button' id='change-total-amount-view-button' class='btn btn-default form-control'>Change Cost of Meal</button>
+          <div class="button-spacer"></div>
+          <button type='button' id='save-new-bill-button' class='btn btn-default form-control'>Save This Bill</button>
+          <button type='button' id='delete-new-bill-button' class='btn btn-default form-control'>Delete This Bill</button>
+        </article>
+
+        <article id='change-total-amount-view' class='change-total-amount-view view-box'>
+          <form id="change-total-amount" class='bill-form change-total-amount'>
+            <fieldset>
+              <legend>What is the new total cost of the meal?</legend>
+              <input class="form-control" type="number" step='0.01' required='true' name="bill[total_amount]" placeholder="45.67">
+              <br>
+              <input class="submit big-button" type="submit" name="submit" value="Update Total Cost">
+            </fieldset>
+          </form>
         </article>
 
       </section>
