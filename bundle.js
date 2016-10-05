@@ -539,6 +539,7 @@ webpackJsonp([0],[
 	};
 
 	var onSaveNewBill = function onSaveNewBill() {
+	  clearSharesFromView();
 	  ui.showMainMenuView();
 	  app.currentBill = null;
 	  app.bill = null;
@@ -814,6 +815,7 @@ webpackJsonp([0],[
 
 	var deleteBillSuccess = function deleteBillSuccess() {
 	  app.bill = null;
+	  clearSharesFromView();
 	  showMainMenuView();
 	};
 
