@@ -253,7 +253,7 @@ webpackJsonp([0],[
 	'use strict';
 
 	var app = {
-	  host: 'http://localhost:3000'
+	  host: 'https://bill-splitter-api.herokuapp.com'
 	  // replace with heroku address before deploying
 	  // https://bill-splitter-api.herokuapp.com
 	};
